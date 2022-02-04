@@ -26,16 +26,17 @@ public class RemoveNthNodeFromEndOfList implements Serializable {
 	}
 	
 	public ListNode removeNthFromEnd(ListNode head, int n) {
-		Stack<Integer> stack = new Stack<>();
+		Stack<ListNode> stack = new Stack<>();
 		while (head != null) {
-			stack.add(head.val);
+			stack.add(head);
 			head = head.next;
 		}
 		int count = 0;
 		while (!stack.empty()) {
-			Integer val = stack.pop();
+			ListNode val = stack.pop();
 			if (++count != n) {
-				head = new ListNode(val, head);
+				val.next = head;
+				head = val;
 			}
 		}
 		return head;
