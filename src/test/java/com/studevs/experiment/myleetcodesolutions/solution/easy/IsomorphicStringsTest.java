@@ -11,21 +11,21 @@ class IsomorphicStringsTest {
 	
 	@Test
 	void isIsomorphic1() {
-		assertTrue(this.bean.isIsomorphic("egg", "add"));
+		assertTrue(bean.isIsomorphic("egg", "add"));
 	}
 	
 	@Test
 	void isIsomorphic2() {
-		assertFalse(this.bean.isIsomorphic("foo", "bar"));
+		assertFalse(bean.isIsomorphic("foo", "bar"));
 	}
 	
 	@Test
 	void isIsomorphic3() {
-		assertTrue(this.bean.isIsomorphic("paper", "title"));
+		assertTrue(bean.isIsomorphic("paper", "title"));
 	}
 	
 	@Test
 	void isIsomorphic4() {
-		assertFalse(this.bean.isIsomorphic("afabacp", "egekalk"));
+		assertFalse(bean.isIsomorphic("afabacp", "egekalk"));
 	}
 }
